@@ -2,7 +2,7 @@ function runReport() {
   
   var merchantId = 123456789; // 1- Identifiant compte Merchant Center
   var tableId    = "ga:123456789"; // 2- Identifiant propriété Google Analytics
-  var sheetId    = "123456xxxxxxxxxxxxxXXXXXXXXXXXXXXXXXX"; // 4- Identifiant feuille Google
+  var sheetId    = "123456xxxxxxxxxxxxxXXXXXXXXXXXXXXXXXX"; // 3- Identifiant feuille Google
   var nbJours    = 90; // 4 - Nombre de jours d'analyse
   
   var today = new Date();
@@ -26,7 +26,7 @@ function runReport() {
             "operator" : "AND",
             "filters": [ // 5-A - Gestion des filtres à personnaliser
               {
-                "dimensionName": "ga:productSku", // Filtre : Tous les produits avec un EAN Bien formé
+                "dimensionName": "ga:productSku", // Filtre : Tous les produits avec un EAN bien formé
                 "operator": "REGEXP",
                 "expressions": ["^[0-9]{13}$"]
               },
