@@ -69,7 +69,7 @@ function runReport() {
   
   for (var row in rows) {
     try {
-      var offerId  = 'online:fr:BE:' + rows[row].dimensions[0];
+      var offerId  = 'online:fr:FR:' + rows[row].dimensions[0]; // "fr:FR" à remplacer par "[langue]:[pays]" si besoin
       var value = ShoppingContent.Products.get(merchantId,offerId);
       var title = value.title;
       results.push([rows[row].dimensions[0],rows[row].metrics[0].values[0],title,"Best seller"]);
